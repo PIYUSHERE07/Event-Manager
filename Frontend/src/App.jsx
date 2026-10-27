@@ -6,11 +6,14 @@ import LoginPage from './pages/LoginPage';
 function App() {
   const type = "user";//host
   const isLoggedIn = false;
+  function loginFormHandler(event){
+    console.log(event)
+  }
 
   return (
     <>
       {
-        isLoggedIn? (type=="user" ? <User /> : <Club/>) : <LoginPage/>
+        isLoggedIn? (type=="user" ? <User /> : <Club/>) : <LoginPage formHandler={loginFormHandler} />
       }
     </>
   )
