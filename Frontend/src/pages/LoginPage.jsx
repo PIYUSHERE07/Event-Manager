@@ -17,6 +17,9 @@ function LoginPage(){
                             <label htmlFor="user-email">Email</label><br />
                             <input type="email" placeholder="Enter you email" name="user-email"/>
                         </div>
+                        <div className="check">
+                            <input type="checkbox" name="termAndCondition" id="tandc" /><label htmlFor="tandc"><a href="#"> Terms and Conditions</a></label>
+                        </div>
                         <div className="user-submit">
                             <button type="submit">Submit</button>
                         </div>
@@ -36,6 +39,9 @@ function LoginPage(){
                         <div className="club-pass">
                             <label htmlFor="club-pass">Password</label><br />
                             <input type="password" placeholder="Enter club-pass" name="club-pass"/>
+                        </div>
+                        <div className="check">
+                            <input type="checkbox" name="termAndCondition" id="tandc" /><label htmlFor="tandc"><a href="#"> Terms and Conditions</a></label>
                         </div>
                         <div className="club-submit">
                             <button type="submit">Submit</button>

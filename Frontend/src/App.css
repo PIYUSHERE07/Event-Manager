@@ -8,6 +8,7 @@ body{
     width: 100%;
     min-height: 100vh;
     box-sizing: border-box;
+    background-color: #1b4965;
 }
 
 .box{
@@ -23,8 +24,8 @@ body{
     justify-content: space-evenly;
     align-items: center;
     gap: 12px;
-    border: 1px solid rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.056);
+    border: 1px solid #CAE9FF;
+    background-color: #cae9ffd3;
     box-shadow: 1px 1px 10px gray;
     padding: 22px 25px;
     border-radius: 10px;
@@ -45,12 +46,25 @@ body{
 }
 .inner-form form label{
     font-size: large;
+    color: #444;
     font-weight: 520;
 }
 .inner-form form input{
     padding: 5px 3px;
     border-radius: 5px;
     border: 1px solid rgb(0, 174, 255);
+}
+.check{
+    display: flex;
+    text-align: center;
+    gap: 9px;
+}
+.check label{
+    display: flex;
+    text-align: center;
+}
+.check label a{
+    font-size: small;
 }
 .inner-form form button{
     width: 100%;
