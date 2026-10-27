@@ -1,14 +1,17 @@
-import { useState } from 'react'
 import './App.css'
 import User from './pages/User'
-import Host from './pages/Host'
+import Club from './pages/Club'
+import LoginPage from './pages/LoginPage';
 
 function App() {
   const type = "user";//host
+  const isLoggedIn = false;
 
   return (
     <>
-      { type=="user" ? <User /> : <Host/>}
+      {
+        isLoggedIn? (type=="user" ? <User /> : <Club/>) : <LoginPage/>
+      }
     </>
   )
 }
