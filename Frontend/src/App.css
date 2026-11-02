@@ -8,36 +8,45 @@ body{
     width: 100%;
     min-height: 100vh;
     box-sizing: border-box;
-    background-color: #1b4965;
+    background-color: #f8f9fc;
 }
 
 .box{
     width: 100%;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
 
 .login-form{
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     gap: 12px;
-    border: 1px solid #CAE9FF;
-    background-color: #cae9ffd3;
-    box-shadow: 1px 1px 10px gray;
+    border: 2px solid #090909;
+    background-color: hsla(183, 97%, 76%, 0.675);
+    /* box-shadow: 1px 1px 10px gray; */
     padding: 22px 25px;
     border-radius: 10px;
+}
+.both-form{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
 }
 .inner-form{
     display: flex;
     flex-direction: column;
     gap: 12px;
-    padding: 30px 15px;
-    background-color: rgba(0, 255, 225, 0.082);
-    border: 1px solid rgb(0, 174, 255);
+    padding: 50px 40px;
+    background-color: rgba(21, 19, 25, 0.082);
+    border: 1px solid rgb(140, 209, 241);
     border-radius: 10px;
+    transition: all 0.2s linear 0s;
 }
 .inner-form form{
     display: flex;
@@ -47,6 +56,7 @@ body{
 .inner-form form label{
     font-size: large;
     color: #444;
+    color: white;
     font-weight: 520;
 }
 .inner-form form input{
@@ -70,8 +80,14 @@ body{
     width: 100%;
     padding: 5px;
     border-radius: 5px;
-    border: 1px solid rgb(0, 174, 255);
+    border: 0.5px solid rgb(163, 216, 241);
     background-color: rgb(0, 76, 255);
     color: white;
     font-size: 16px;
+}
+.userform:hover{
+    background-color: rgb(254, 252, 225);
+}
+.clubform:hover{
+    background-color: rgb(177, 250, 177);
 }
