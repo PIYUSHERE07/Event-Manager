@@ -53,7 +53,8 @@ exports.adminPost =[
         if(!error.isEmpty()){
             return res.status(400).json({
                 success: false,
-                errors: error.array()
+                errors: error.array(),
+                oldInput: req.body
             })
         }
         else{
@@ -61,7 +62,7 @@ exports.adminPost =[
             await newClub.save().then(club=>{
                 console.log(club._id);
                 req.session.councilCategory = councilCategory;
-                req.session.councilId = club._id;
+                req.session.councilId = club._id.toString();
                 res.status(200).json({
                     success: true,
                     errors:[]
