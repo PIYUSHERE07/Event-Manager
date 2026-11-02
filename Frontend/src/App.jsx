@@ -1,7 +1,7 @@
 import './App.css'
 import User from './pages/User'
 import Club from './pages/Club'
-import LoginPage from './pages/LoginPage';
+import Calendar from './pages/Calender';
 
 function App() {
   const type = "user";//host
@@ -12,8 +12,9 @@ function App() {
 
   return (
     <>
+      <Calendar />
       {
-        isLoggedIn? (type=="user" ? <User /> : <Club/>) : <LoginPage formHandler={loginFormHandler} />
+        type=="Club" ? <Club /> : (type=="host"?<Host /> : <User/>)
       }
     </>
   )

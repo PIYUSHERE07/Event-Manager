@@ -1,0 +1,7 @@
+exports.hostGet = ()=>{
+
+}
+
+exports.hostPost = ()=>{
+    
+}

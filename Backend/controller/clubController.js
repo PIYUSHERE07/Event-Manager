@@ -1,0 +1,7 @@
+exports.clubGet = ()=>{
+
+}
+
+exports.clubPost = ()=>{
+    
+}
