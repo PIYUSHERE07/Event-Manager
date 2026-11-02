@@ -1,7 +1,0 @@
-exports.hostGet = ()=>{
-
-}
-
-exports.hostPost = ()=>{
-    
-}
