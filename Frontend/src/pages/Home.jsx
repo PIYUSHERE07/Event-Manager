@@ -1,8 +1,8 @@
 import React from 'react';
-import '../../public/FirstPage.css';
+import '../../public/Home.css';
 import bannerimg from '../assets/banner-image.png';
-import { Link } from "react-router-dom";
-import HomeCards from '../components/HomeCards';
+// import { Link } from "react-router-dom";
+// import HomeCards from '../components/HomeCards';
 import '../../public/Home.css';
 const Home = () => {
 
