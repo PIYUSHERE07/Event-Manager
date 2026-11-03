@@ -1,8 +1,9 @@
 import './App.css';
 import Home from './pages/Home';
 import LoginPage from './pages/LoginPage';
-import AddEvent from './components/AddEvent';
+import AddEvent from './pages/AddEvent';
 import Admin from './pages/Admin'
+import AllEvent from './pages/AllEvent'
 import {Route,useNavigate,Routes,BrowserRouter} from 'react-router-dom' 
 import { useState } from 'react';
 
@@ -20,18 +21,18 @@ function App() {
       <Routes>
         <Route path='/' element={
           <>
-            <MainNav />
+            {/* <MainNav /> */}
             <div>
-              <SideBar />
+              {/* <SideBar /> */}
               <Home />
             </div>
           </>
         } />
       <Route path='/allEvent' element={
           <>
-            <MainNav />
+            {/* <MainNav /> */}
             <div>
-              <SideBar />
+              {/* <SideBar /> */}
               <AllEvent />
             </div>
           </>

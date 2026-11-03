@@ -1,14 +1,14 @@
 import React from 'react'
 
 import  '../../public/card.css'
-const Card = ({title, date, start_time, end_time}) => {
+const Card = ({activity}) => {
+  const {activityName, startDate, startTime, endDate, endTime, activityDescription, activityLink} = activity;
   return (
     <>
     <div className='card'>
-        <div>{title}</div>
-        <div>{date}</div>
-        
-        <div>Start-time: {start_time} and End-time: {end_time}</div>
+        <div>{activityName}</div>
+        <div>{startDate.split('T')[0]} to {endDate.split('T')[0]}</div>
+        <div>Start-time: {startTime} and End-time: {endTime}</div>
     </div>
     
     </>
