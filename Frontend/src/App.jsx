@@ -21,64 +21,19 @@ function App() {
   return (
     <>
     <BrowserRouter>
-      <Routes>
-        <Route path='/' element={
-          <>
-            <MainNav />
-            <div>
-              <SideBar />
-              <Home />
-            </div>
-          </>
-        } />
-      <Route path='/allEvent' element={
-          <>
-            <MainNav />
-            <div>
-              <SideBar />
-              <AllEvent />
-            </div>
-          </>
-        } />
-        <Route path='/addCouncil' element={
-          <>
-            <MainNav />
-            <div>
-              <SideBar />
-              <AddCouncil />
-            </div>
-          </>
-        } />
-        <Route path='/allEvent' element={
-          <>
-            <MainNav />
-            <div>
-              <SideBar />
-              <AllEvent />
-            </div>
-          </>
-        } />
-        <Route path='/allEvent' element={
-          <>
-            <div>
-              <MainNav />
-            </div>
-            <div>
-              <SideBar />
-              <AllEvent />
-            </div>
-          </>
-        } />
-        <Route path='/allEvent' element={
-          <>
-            <MainNav />
-            <div>
-              <SideBar />
-              <AllEvent />
-            </div>
-          </>
-        } />
-      </Routes>
+      <MainNav /> 
+      <div className="app-layout-wrapper">
+        
+        <SideBar /> 
+        
+        <main className="page-content-area">
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/allEvent' element={<AllEvent />} />
+          </Routes>
+        </main>
+        
+      </div>
     </BrowserRouter>
     </>
   )

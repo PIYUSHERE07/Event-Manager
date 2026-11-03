@@ -1,14 +1,17 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
 import '../../public/SideBar.css';
 
 const SideBar = () => {
   return (
     <aside className="sidebar">
       <ul className="sidebar-links">
-        <li>Home</li>
-        <li>All Events</li>
-        <li>Services</li>
-        <li>Contact</li>
+        <li><Link to='/'>Home</Link></li>
+        <li><Link to='/allEvent'>All Activities</Link></li>
+        <li><Link to='/'>Calender</Link></li>
+        <li><Link to='/'>Add Event</Link></li>
+        <li><Link to='/'>My Activities</Link></li>
+        <li><Link to='/'>Add Council</Link></li>
       </ul>
     </aside>
   );
