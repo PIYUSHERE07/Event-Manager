@@ -1,85 +1,58 @@
+
+import '../../public/LoginPage.css';
 function LoginPage({formHandler}){
+
     return(
+       <>
         <div className="box">
             
             <div className="login-form">
                 <div>
                     <h1>Login</h1>
                 </div>
-                <div className="both-form">
-                    <div className="userform inner-form">
-                    <h2>User Login</h2>
+                <div className="form">
+                    
+                  <div className="clubform inner-form">
+                    <h2>Head Login</h2>
                     <form
                         // action="/" 
                         // method="post"
                         onSubmit={(event)=>{
                             event.preventDefault();
                             const data={
-                                firstname : event.target.firstname.value,
-                                lastname : event.target.lastname.value,
-                                email : event.target.user_email.value
-                            }
-                            formHandler(data);
-                        }}
-                        >
-                        <div className="firstname">
-                            <label htmlFor="firstname">Firstname</label><br />
-                            <input type="text" placeholder="Enter firstname" name="firstname" required="required"/>
-                        </div>
-                        <div className="lastname">
-                            <label htmlFor="lastname">Lastname</label><br />
-                            <input type="text" placeholder="Enter lastname" name="lastname"  required="required"/>
-                        </div>
-                        <div className="user_email">
-                            <label htmlFor="user_email">Email</label><br />
-                            <input type="email" placeholder="Enter you email" name="user_email" required="required"/>
-                        </div>
-                        <div className="check">
-                            <input type="checkbox" name="termAndCondition" id="tandc"  required="required"/><label htmlFor="tandc"><a href="#"> Terms and Conditions</a></label>
-                        </div>
-                        <div className="user-submit">
-                            <button type="submit">Submit</button>
-                        </div>
-                    </form>
-                </div>
-                <div className="clubform inner-form">
-                    <h2>Club Login</h2>
-                    <form
-                        // action="/" 
-                        // method="post"
-                        onSubmit={(event)=>{
-                            event.preventDefault();
-                            const data={
-                                firstname : event.target.clubname.value,
-                                email : event.target.club_email.value,
-                                password : event.target.club_pass.value
+                                
+                                email : event.target.elements.id.value,
+                                password : event.target.elements.pass.value
                             }
                             formHandler(data)
                         }}
                         >
-                        <div className="clubname">
+                        {/* <div className="clubname">
                             <label htmlFor="clubname">Clubname</label><br />
                             <input type="text" placeholder="Enter club name" name="clubname" required="required"/>
+                        </div> */}
+                        <div className="id">
+                            <label htmlFor="id">Id</label><br />
+                            <input type="email" placeholder="Enter your id" name="id" required="required"/>
                         </div>
-                        <div className="club_email">
-                            <label htmlFor="club_email">Club Email-Id</label><br />
-                            <input type="email" placeholder="Enter club email" name="club_email" required="required"/>
+                        <div className="pass">
+                            <label htmlFor="pass">Password</label><br />
+                            <input type="password" placeholder="Enter your password" name="pass" required="required"/>
                         </div>
-                        <div className="club_pass">
-                            <label htmlFor="club_pass">Password</label><br />
-                            <input type="password" placeholder="Enter club-pass" name="club_pass" required="required"/>
-                        </div>
-                        <div className="check">
+                        {/* <div className="check">
                             <input type="checkbox" name="termAndCondition" id="tandc"  required="required"/><label htmlFor="tandc"><a href="#"> Terms and Conditions</a></label>
-                        </div>
+                        </div> */}
                         <div className="club-submit">
                             <button type="submit">Submit</button>
                         </div>
                     </form>
-                </div>
+                  </div>
                 </div>
             </div>
+            
         </div>
+        
+       </>
     )
 }
 export default LoginPage;
