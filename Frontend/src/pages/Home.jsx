@@ -8,17 +8,6 @@ const Home = () => {
 
   return (
     <> 
-       <div className="navbar">
-        <h1><b>Event-Manager</b></h1>
-        <div className='navbar-buttons'>
-          <div>Home</div>
-          {/* <div>Clubs</div> */}
-          <div>Events</div>
-          <div>Calender</div>
-          {/* <div>About</div> */}
-        </div>
-        <div className='sign-in-button'><button>Sign In</button></div>
-       </div>
        <div className='banner'>
           <div className="banner-content">
             <h3 className='banner-hero'>IITDMJ EVENTS PLATFORM</h3>
