@@ -1,12 +1,13 @@
 import './App.css';
-import FirstPage from './pages/FirstPage';
+import Home from './pages/Home';
 import LoginPage from './pages/LoginPage';
 import AddEvent from './components/AddEvent';
 import Admin from './pages/Admin'
 import {Route,useNavigate,Routes,BrowserRouter} from 'react-router-dom' 
+import { useState } from 'react';
 
 function App() {
-  const type = "user";//host
+  const userType = useState("user");
   const isLoggedIn = false;
   function loginFormHandler(event){
     console.log(event)
@@ -17,14 +18,24 @@ function App() {
     <>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={
+        <Route path='/' element={
           <>
-          <LoginPage />
-          <FirstPage />
-          <Admin />
+            <MainNav />
+            <div>
+              <SideBar />
+              <Home />
+            </div>
           </>
-          } />
-        <Route path="/add-event" element={<AddEvent type="addEvent" />} />
+        } />
+      <Route path='/allEvent' element={
+          <>
+            <MainNav />
+            <div>
+              <SideBar />
+              <AllEvent />
+            </div>
+          </>
+        } />
       </Routes>
     </BrowserRouter>
     </>

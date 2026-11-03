@@ -2,7 +2,7 @@ import React from 'react'
 import '../../public/FirstPage.css';
 import { Link } from "react-router-dom";
 import HomeCards from '../components/HomeCards';
-const FirstPage = () => {
+const Home = () => {
 
   
 
@@ -42,4 +42,4 @@ const FirstPage = () => {
   )
 }
 
-export default FirstPage;
+export default Home;
