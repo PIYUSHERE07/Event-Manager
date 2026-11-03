@@ -1,4 +1,21 @@
 function AddCouncil(){
+    
+    function handelForm(event){
+        const response = fetch("http://localhost:3000/admin/councilLogin",{
+            method: "POST",
+            headers:{
+                "Content-Type":"application/json"
+            },
+            body:JSON.stringify({
+                councilEmail:event.councilEmail,
+                councilPassword:event.councilPassword,
+                conformPassword:event.conformPassword,
+                councilName: event.councilName,
+                councilCategory: event.councilCategory
+            })
+        })
+    }
+
     return(
     <>
         <div className="container">
@@ -9,7 +26,7 @@ function AddCouncil(){
                 <p>Plan your event. Share the details. Make it happen.</p>
             </div>
 
-            <form>
+            <form onSubmit={handelForm}>
 
                 <div className="section-title">
                     <span>01</span>
@@ -19,13 +36,13 @@ function AddCouncil(){
             <div className="form-group">
                 <p>Choose type of Club</p>
                 <div className="club-options">
-                    <input type="radio" id="sports" name="Type of Club" value="Sports"/>
+                    <input type="radio" id="sports" name="councilCategory" value="Sports"/>
                     <label for="sports">Sports</label>
 
-                    <input type="radio" id="cultural" name="Type of Club" value="Cultural"/>
+                    <input type="radio" id="cultural" name="councilCategory" value="Cultural"/>
                     <label for="cultural">Cultural</label>
 
-                    <input type="radio" id="technical" name="Type of Club" value="Technical"/>
+                    <input type="radio" id="technical" name="councilCategory" value="Technical"/>
                     <label for="technical">Technical</label>
                 </div>
             </div>
@@ -38,7 +55,7 @@ function AddCouncil(){
 
             <div className="form-group">
                     <label for="session">NAME OF CLUB</label>
-                    <input type="text" id="session" name="session"  placeholder="enter club name " required />
+                    <input type="text" id="session" name="councilName"  placeholder="enter club name " required />
                 </div>
 
                 <div className="section-title">
@@ -48,17 +65,27 @@ function AddCouncil(){
 
                 <div className="form-group">
                     <label for="eventlink">Create Email for Club</label>
-                    <input type="email" id="eventlink" name="eventlink" placeholder="xyz@gmail.com" />
+                    <input type="email" id="eventlink" name="councilEmail" placeholder="xyz@gmail.com" />
                 </div>
 
                 <div className="section-title">
                     <span>04</span>
-                    Club Password
+                    Password
                 </div>
 
             <label for="pwd">Password</label>
-            <input type="password" id="pwd" value="private info" name="pwd" required />
+            <input type="password" id="pwd" value="private info" name="conformPassword" required />
             <br/><br/> 
+
+            <div className="section-title">
+                    <span>04</span>
+                    Conform Password
+                </div>
+
+            <label for="pwd"> Conform Password</label>
+            <input type="password" id="pwd" value="private info" name="councilPassword" required />
+            <br/><br/> 
+            
             
 
                 <button type="submit">

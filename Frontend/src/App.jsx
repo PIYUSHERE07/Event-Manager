@@ -1,7 +1,8 @@
 import './App.css';
 import Home from './pages/Home';
 import LoginPage from './pages/LoginPage';
-import AddEvent from './components/AddEvent';
+import AddEvent from './pages/AddEvent';
+import AddCouncil from './pages/AddCouncil';
 import MainNav from './components/MainNav';
 import SideBar from './components/SideBar';
 import Admin from './pages/Admin'
@@ -23,18 +24,56 @@ function App() {
       <Routes>
         <Route path='/' element={
           <>
-            {/* <MainNav /> */}
+            <MainNav />
             <div>
-              {/* <SideBar /> */}
+              <SideBar />
               <Home />
             </div>
           </>
         } />
       <Route path='/allEvent' element={
           <>
-            {/* <MainNav /> */}
+            <MainNav />
             <div>
-              {/* <SideBar /> */}
+              <SideBar />
+              <AllEvent />
+            </div>
+          </>
+        } />
+        <Route path='/addCouncil' element={
+          <>
+            <MainNav />
+            <div>
+              <SideBar />
+              <AddCouncil />
+            </div>
+          </>
+        } />
+        <Route path='/allEvent' element={
+          <>
+            <MainNav />
+            <div>
+              <SideBar />
+              <AllEvent />
+            </div>
+          </>
+        } />
+        <Route path='/allEvent' element={
+          <>
+            <div>
+              <MainNav />
+            </div>
+            <div>
+              <SideBar />
+              <AllEvent />
+            </div>
+          </>
+        } />
+        <Route path='/allEvent' element={
+          <>
+            <MainNav />
+            <div>
+              <SideBar />
               <AllEvent />
             </div>
           </>
