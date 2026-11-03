@@ -1,29 +1,37 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("./fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: linear-gradient(135deg, #0f172a, #1e1b4b, #312e81);
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 20px;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
 }
 
 /* Main Container */
 
 .container {
     width: 100%;
-    max-width: 650px;
     background: #ffffff;
     padding: 40px;
     border-radius: 20px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
     border: 1px solid rgba(255, 255, 255, 0.3);
+    min-width: 1000px;
+    display: flex;
+    justify-content: space-around;
+
 }
 
 /* Header */
@@ -36,7 +44,7 @@ body {
 .icon {
     width: 55px;
     height: 55px;
-    background: linear-gradient(135deg, #6366f1, #a855f7);
+    background: #1e1b4b;
     color: white;
     font-size: 30px;
     border-radius: 15px;
@@ -52,11 +60,19 @@ body {
     font-size: 30px;
     letter-spacing: 3px;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 .form-header p {
     color: #777;
     font-size: 14px;
+}
+
+.header-image {
+    width: 100px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
 }
 
 /* Section Headings */
@@ -74,7 +90,7 @@ body {
 }
 
 .section-title span {
-    background: linear-gradient(135deg, #6366f1, #9333ea);
+    background: #1e1b4b;
     color: white;
     padding: 6px 10px;
     border-radius: 7px;
@@ -85,6 +101,7 @@ body {
 
 .form-group {
     margin-bottom: 22px;
+
 }
 
 .form-group label {
@@ -146,7 +163,7 @@ button {
     width: 100%;
     padding: 16px;
     margin-top: 15px;
-    background: linear-gradient(135deg, #4f46e5, #9333ea);
+    background: #1e1b4b;
     color: white;
     border: none;
     border-radius: 10px;
@@ -165,17 +182,9 @@ button:hover {
 
 /* Footer */
 
-.footer-text {
-    text-align: center;
-    color: #999;
-    font-size: 12px;
-    margin-top: 20px;
-    letter-spacing: 1px;
-}
-
 /* Responsive Design */
 
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
 
     .container {
         padding: 25px 20px;
@@ -190,4 +199,4 @@ button:hover {
         gap: 0;
     }
 
-}
+} */

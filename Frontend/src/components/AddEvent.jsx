@@ -18,6 +18,11 @@ const AddEvent = () => {
         <div className="form-header">
             <div className="icon">📝</div>
             <h1>EVENT DETAILS</h1>
+            <img
+            src="../assets/activityForm.jpg"
+            alt="Activity Form"
+            className="header-image"
+            />
         </div>
 
         <form method="post" onSubmit={handleAddEvent}>
