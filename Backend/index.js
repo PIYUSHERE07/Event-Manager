@@ -27,10 +27,9 @@ app.use(session({
     store:store
 }))
 
-
 app.use("/admin",adminRouter)
 app.use("/club",clubRouter)
-app.use("/",userRouter)
+app.use(userRouter)
 
 const PORT=process.env.PORT;
 mongoose.connect(process.env.DB_URL).then(()=>{

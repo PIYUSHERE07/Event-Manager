@@ -18,6 +18,12 @@ const councilSchema = mongoose.Schema({
         type: String,
         required: true
     },
+    councilActivity:[
+        {
+            type: String,
+            ref: "Activity"
+        }
+    ]
 })
 
 module.exports = mongoose.model("Councils",councilSchema);

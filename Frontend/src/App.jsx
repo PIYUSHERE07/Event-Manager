@@ -4,16 +4,15 @@ import LoginPage from './pages/LoginPage';
 import User from './pages/User'
 import Club from './pages/Club'
 import Calendar from './pages/Calender';
-import LoginPage from './pages/LoginPage';
 import Admin from './pages/Admin';
 
 import FirstPage from './pages/FirstPage';
 function App() {
-  // const type = "user";//host
-  // const isLoggedIn = false;
-  // function loginFormHandler(event){
-  //   console.log(event)
-  // }
+  const type = "user";//host
+  const isLoggedIn = false;
+  function loginFormHandler(event){
+    console.log(event)
+  }
 
   return (
     <>

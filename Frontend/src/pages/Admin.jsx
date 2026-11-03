@@ -6,9 +6,9 @@ function Admin(){
                 "Content-Type":"application/json"
             },
             body:JSON.stringify({
-                councilEmail:"piyush@gmail.com",
-                councilPassword:"piyush123",
-                conformPassword:"piyush123",
+                councilEmail:"sports@gmail.com",
+                councilPassword:"sports123",
+                conformPassword:"sports123",
                 councilName: "piyush Malewar",
                 councilCategory: "sports"
             })

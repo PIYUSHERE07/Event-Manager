@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
-const eventSchema = new mongoose.Schema({
-    eventName :{
+const activitySchema = new mongoose.Schema({
+    activityName :{
         type : String,
         required : true
     },
@@ -20,7 +20,13 @@ const eventSchema = new mongoose.Schema({
     endTime :{
         type:String,
         required: true
+    },
+    activityDescription:{
+        type:String
+    },
+    activityLink:{
+        type:String
     }
 })
 
-module.exports = mongoose.model('Events',eventSchema);
+module.exports = mongoose.model('Activity',activitySchema);
