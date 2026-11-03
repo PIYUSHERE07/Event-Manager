@@ -1,11 +1,10 @@
 
 import '../../public/LoginPage.css';
 function LoginPage({formHandler}){
-
+    
     return(
        <>
         <div className="box">
-            
             <div className="login-form">
                 <div>
                     <h1>Login</h1>

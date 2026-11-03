@@ -1,13 +1,13 @@
 import React from 'react'
 import '../../public/FirstPage.css';
-import {Link} from 'react-router-dom';
+import { Link } from "react-router-dom";
 import HomeCards from '../components/HomeCards';
 const FirstPage = () => {
-  return (
-    <>
-   
+
   
-   
+
+  return (
+    <> 
     <div className="intro">
         <div className="navbar">
        <div className="icon">
@@ -21,8 +21,6 @@ const FirstPage = () => {
           <h3 className="navbutton"> About</h3>
           
           <Link to="./pages/LoginPage"><h3 className="navbutton"> Log in</h3></Link>
-      
-
       </div>
 
       
@@ -51,9 +49,6 @@ const FirstPage = () => {
         <HomeCards/>
     </div>
    <div>Event Categories</div>
-
-
-
     </>
   )
 }

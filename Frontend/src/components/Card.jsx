@@ -1,7 +1,7 @@
 import React from 'react'
 
 import  '../../public/card.css'
-const card = ({title, date, start_time, end_time}) => {
+const Card = ({title, date, start_time, end_time}) => {
   return (
     <>
     <div className='card'>
@@ -15,4 +15,4 @@ const card = ({title, date, start_time, end_time}) => {
   )
 }
 
-export default card
+export default Card;

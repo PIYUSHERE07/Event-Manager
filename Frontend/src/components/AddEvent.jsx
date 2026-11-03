@@ -1,6 +1,16 @@
 import React from 'react'
 import '../../public/AddEvent.css'
 const AddEvent = () => {
+    function handleAddEvent(event){
+        event.preventDefault();
+        console.log(event.target.activityName.value);
+        console.log(event.target.startDate.value);
+        console.log(event.target.startTime.value);
+        console.log(event.target.endDate.value);
+        console.log(event.target.endTime.value);
+        console.log(event.target.eventDescription.value);
+        console.log(event.target.eventLink.value);
+    }
   return (
    <>
     <div className="container">
@@ -10,7 +20,7 @@ const AddEvent = () => {
             <h1>EVENT DETAILS</h1>
         </div>
 
-        <form>
+        <form method="post" onSubmit={handleAddEvent}>
 
             <div className="section-title">
                 <span>01</span>
@@ -32,9 +42,6 @@ const AddEvent = () => {
                 <div className="form-group">
                     <label htmlFor="startDate">EVENT START DATE</label>
                     <input type="date" id="startDate" name="startDate" required/>
-                    
-                    
-
                 </div>
 
                 <div className="form-group">
@@ -77,9 +84,6 @@ const AddEvent = () => {
             <button type="submit">
                 SUBMIT EVENT DETAILS →
             </button>
-
-            
-
         </form>
 
     </div>
