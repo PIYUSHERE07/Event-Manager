@@ -1,3 +1,4 @@
+
 @font-face {
   font-family: "Roboto";
   src: url("./fonts/Roboto-Regular.ttf") format("truetype");
@@ -5,24 +6,17 @@
   font-style: normal;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
+.add-event-scope {
   font-family: "Roboto", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 40px 20px;
+  min-height: 80vh; 
 }
 
-/* Main Container */
-
-.container {
-    width: 100%;
+.add-event-scope .container {
+    width: 90%;
     background: #ffffff;
     padding: 40px;
     border-radius: 20px;
@@ -31,12 +25,9 @@ body {
     min-width: 1000px;
     display: flex;
     justify-content: space-around;
-
 }
 
-/* Header */
-
-.form-header {
+.add-event-scope .container .form-header {
     text-align: center;
     margin-bottom: 35px;
     display: flex;
@@ -44,12 +35,12 @@ body {
     align-items: center;
 }
 
-.form-header img{
+.add-event-scope .container .form-header img{
     height: 600px;
     width: 400px
 }
 
-.icon {
+.add-event-scope .container .icon {
     width: 55px;
     height: 55px;
     background: #1e1b4b;
@@ -63,7 +54,7 @@ body {
     box-shadow: 0 5px 15px rgba(99, 102, 241, 0.4);
 }
 
-.form-header h1 {
+.add-event-scope .container .form-header h1 {
     color: #1e1b4b;
     font-size: 30px;
     letter-spacing: 3px;
@@ -71,23 +62,19 @@ body {
     text-align: center;
 }
 
-.form-header p {
+.add-event-scope .container .form-header p {
     color: #777;
     font-size: 14px;
 }
 
-.header-image {
+.add-event-scope .container .header-image {
     width: 100px;
     height: 80px;
     object-fit: cover;
     border-radius: 8px;
 }
 
-
-
-/* Section Headings */
-
-.section-title {
+.add-event-scope .container .section-title {
     display: flex;
     align-items: center;
     gap: 12px;
@@ -99,14 +86,11 @@ body {
     border-bottom: 2px solid #e0e7ff;
 }
 
-/* Input Fields */
-
-.form-group {
+.add-event-scope .container .form-group {
     margin-bottom: 22px;
-
 }
 
-.form-group label {
+.add-event-scope .container .form-group label {
     display: block;
     font-size: 13px;
     font-weight: 700;
@@ -115,8 +99,8 @@ body {
     letter-spacing: 0.5px;
 }
 
-.form-group input,
-.form-group textarea {
+.add-event-scope .container .form-group input,
+.add-event-scope .container .form-group textarea {
     width: 100%;
     padding: 14px;
     border: 1.5px solid #dbe0f0;
@@ -129,16 +113,14 @@ body {
     font-family: inherit;
 }
 
-.form-group input:focus,
-.form-group textarea:focus {
+.add-event-scope .container .form-group input:focus,
+.add-event-scope .container .form-group textarea:focus {
     border-color: #6366f1;
     background: #ffffff;
     box-shadow: 0 0 10px rgba(99, 102, 241, 0.2);
 }
 
-/* Date and Time Layout */
-
-.schedule-box {
+.add-event-scope .container .schedule-box {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 5px 20px;
@@ -148,20 +130,16 @@ body {
     border: 1px solid #e0e7ff;
 }
 
-.schedule-box .form-group {
+.add-event-scope .container .schedule-box .form-group {
     margin-bottom: 15px;
 }
 
-/* Text Area */
-
-.form-group textarea {
+.add-event-scope .container .form-group textarea {
     resize: vertical;
     min-height: 120px;
 }
 
-/* Submit Button */
-
-button {
+.add-event-scope .container button {
     width: 100%;
     padding: 16px;
     margin-top: 15px;
@@ -176,29 +154,8 @@ button {
     transition: 0.3s;
 }
 
-button:hover {
+.add-event-scope .container button:hover {
     background: linear-gradient(135deg, #3730a3, #7e22ce);
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(99, 102, 241, 0.35);
 }
-
-/* Footer */
-
-/* Responsive Design */
-
-/* @media (max-width: 600px) {
-
-    .container {
-        padding: 25px 20px;
-    }
-
-    .form-header h1 {
-        font-size: 24px;
-    }
-
-    .schedule-box {
-        grid-template-columns: 1fr;
-        gap: 0;
-    }
-
-} */
