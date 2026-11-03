@@ -105,3 +105,26 @@ exports.updateActivity = async (req,res,next)=>{
         message:["activity deleted successfully."]
     })
 }
+
+exports.getMyActivities = async (req,res,next)=>{
+    const councilId = req.session.councilId;
+    let Activities = [];
+    if(councilId){
+        Councils.findById(councilId)
+        .then(async (council)=>{
+            Activities = await Promise.all( council.councilActivity.map(async activityId => {
+                    return await Activity.findById(activityId);
+                })
+            );
+            return res.status(200).json({
+                success : true,
+                Activities
+            })
+        })
+    }
+    else{
+        return res.status(400).json({
+            success:false
+        })
+    }
+}

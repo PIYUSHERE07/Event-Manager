@@ -10,7 +10,7 @@ const SideBar = () => {
         <li><Link to='/allEvent'>All Activities</Link></li>
         <li><Link to='/event-calander'>Calender</Link></li>
         <li><Link to='/add-event'>Add Event</Link></li>
-        <li><Link to='/'>My Activities</Link></li>
+        <li><Link to='/MyActivities'>My Activities</Link></li>
         <li><Link to='/add-council'>Add Council</Link></li>
       </ul>
     </aside>

@@ -6,5 +6,6 @@ clubRouter.get("/",councilController.clubGet);
 clubRouter.post("/add-activity",councilController.addActivityPost);
 clubRouter.delete("/delete-event/:activityId",councilController.deleteActivity);
 clubRouter.put("/update-event/:activityId",councilController.updateActivity);
+clubRouter.get("/getMyActivities",councilController.getMyActivities)
 
 exports.clubRouter = clubRouter;

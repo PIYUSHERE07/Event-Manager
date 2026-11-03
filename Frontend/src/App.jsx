@@ -4,6 +4,7 @@ import LoginPage from './pages/LoginPage';
 import AddEvent from './pages/AddEvent';
 import AddCouncil from './pages/AddCouncil';
 import Calender from './pages/Calender';
+import MyActivities from './pages/MyActivities';
 import MainNav from './components/MainNav';
 import SideBar from './components/SideBar';
 import AllEvent from './pages/AllEvent'
@@ -33,7 +34,7 @@ function App() {
             <Route path='/add-council' element={<AddCouncil />} />
             <Route path='/add-event' element={<AddEvent />} />
             <Route path='/event-calander' element={<Calender />} />
-            <Route path='/myActivities' element={<Home />} />
+            <Route path='/MyActivities' element={<MyActivities />} />
             <Route path='/login-page' element={<LoginPage />} />
           </Routes>
         </main>
