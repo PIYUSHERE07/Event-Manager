@@ -1,46 +1,5 @@
-.intro{
-    background-color: rgb(50, 98, 50);
-   
-    color: white;
-
-}
-.navbar{
+.navbar {
     display: flex;
-    flex-direction: rows;
-    justify-content: space-between;
-    
-
-}
-.navButtons{
-
-    display: flex;
-    float: right;
-    flex-direction: row;
-    
-    padding-top: 16px;
-
-    
-}
-.navbutton{
-    padding: 2px;
-    margin: 4px;
-    
-}
-
-.sub-body{
-  
-   
-}
-.sun-intro-line{
-    margin: 0;
-    padding: 0px;
-}
-h4{
-    margin: 0 0 4px;;
-}
-.event-nav{
-    margin-top: 30px;
-    display: flex;
-    flex-direction: row;
-    padding: 4px;
+    align-items: center;
+    background-color: rgb(60, 73, 158);
 }

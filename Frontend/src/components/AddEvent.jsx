@@ -35,6 +35,7 @@ const AddEvent = ({type}) => {
     }
   return (
    <>
+    <div className='add-event-scope'>
     <div className="container">
 
         <div className="form-header">
@@ -109,6 +110,7 @@ const AddEvent = ({type}) => {
             </button>
         </form>
 
+    </div>
     </div>
 
 
