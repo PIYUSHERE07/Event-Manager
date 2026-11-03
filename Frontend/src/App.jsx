@@ -6,7 +6,6 @@ import AddCouncil from './pages/AddCouncil';
 import Calender from './pages/Calender';
 import MainNav from './components/MainNav';
 import SideBar from './components/SideBar';
-import Admin from './pages/Admin'
 import AllEvent from './pages/AllEvent'
 import {Route,useNavigate,Routes,BrowserRouter} from 'react-router-dom' 
 import { useState } from 'react';
