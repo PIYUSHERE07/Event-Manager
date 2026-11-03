@@ -1,6 +1,8 @@
 import './App.css';
 import FirstPage from './pages/FirstPage';
-import AddEvent from './components/AddEvent'
+import LoginPage from './pages/LoginPage';
+import AddEvent from './components/AddEvent';
+import Admin from './pages/Admin'
 import {Route,useNavigate,Routes,BrowserRouter} from 'react-router-dom' 
 
 function App() {
@@ -15,8 +17,14 @@ function App() {
     <>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<FirstPage />} />
-        <Route path="/add-event" element={<AddEvent />} />
+        <Route path="/" element={
+          <>
+          <LoginPage />
+          <FirstPage />
+          <Admin />
+          </>
+          } />
+        <Route path="/add-event" element={<AddEvent type="addEvent" />} />
       </Routes>
     </BrowserRouter>
     </>

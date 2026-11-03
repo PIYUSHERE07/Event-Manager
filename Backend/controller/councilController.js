@@ -5,18 +5,21 @@ exports.clubGet = ()=>{
     res.send("Hello...")
 }
 
-exports.addActivityPost = (req,res,next)=>{
+exports.addActivityPost =async (req,res,next)=>{
     const {activityName,startDate,startTime,endDate,endTime,activityDescription,activityLink} = req.body;
     const event = new Activity({activityName,startDate,startTime,endDate,endTime,activityDescription,activityLink});
-
     const councilId = req.session.councilId;
-    event.save().then((event)=>{
-
-        Councils.findById(councilId)
+    await event.save().then( async (event)=>{
+        await Councils.findById(councilId)
         .then(async (council)=>{
             if(council){
-                council.councilActivity.push(event._id.toString());
+                await council.councilActivity.push(event._id.toString());
                 await council.save();
+                return res.status(200).json({
+                    success : true,
+                    message : ["event added successfully"],
+                    event : req.body
+                })
             }
             else{
                 return res.status(400).json({
@@ -25,11 +28,11 @@ exports.addActivityPost = (req,res,next)=>{
                 })
             }
         })
-
-        return res.status(200).json({
-            success : true,
-            message : ["event added successfully"],
-            event : req.body
+        .catch((error)=>{
+            return res.status(500).json({
+            success : false,
+            message : ["internal server error"]
+        })
         })
     })
     .catch((error)=>{

@@ -12,19 +12,27 @@ require('dotenv').config();
 
 const app = express()
 
-app.use(cors());
+app.use(cors({
+    origin: "http://localhost:5173",
+    credentials: true
+}));
 app.use(express.json());
 app.use(express.urlencoded({extended:true}))
 
 const store = new MongoDBStore({
     uri: process.env.DB_URL,
-    collection: 'sessions'
+    collection: 'session'
 });
 app.use(session({
     secret: "eventManagenment",
     resave: false,
-    saveUninitialized: true,
-    store:store
+    saveUninitialized: false,
+    store:store,
+    cookie: {
+        httpOnly: true,
+        secure: false,
+        maxAge: 1000 * 60 * 60 * 24
+    }
 }))
 
 app.use("/admin",adminRouter)

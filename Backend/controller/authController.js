@@ -38,9 +38,10 @@ exports.loginPost =[
     .withMessage("only alphabets,numbers,@,# and $ allowed"),
 
     async (req,res,next)=>{
+        console.log("inside login in")
         const {councilEmail,councilPassword} = req.body
         const errors = validationResult(req);
-
+        console.log(errors.array())
         if(!errors.isEmpty()){
             return res.status(400).json({
                 success : false,
@@ -49,7 +50,7 @@ exports.loginPost =[
             })
         }
 
-        Councils.findOne({councilEmail : councilEmail}).then((council)=>{
+        Councils.findOne({councilEmail : councilEmail}).then( (council)=>{
             if(council && councilPassword === council.councilPassword){
                 req.session.councilCategory = council.councilCategory;
                 req.session.councilId = council._id.toString();

@@ -1,15 +1,36 @@
 import React from 'react'
 import '../../public/AddEvent.css'
-const AddEvent = () => {
-    function handleAddEvent(event){
+const AddEvent = ({type}) => {
+    async function handleAddEvent(event){
         event.preventDefault();
-        console.log(event.target.activityName.value);
-        console.log(event.target.startDate.value);
-        console.log(event.target.startTime.value);
-        console.log(event.target.endDate.value);
-        console.log(event.target.endTime.value);
-        console.log(event.target.eventDescription.value);
-        console.log(event.target.eventLink.value);
+        
+        const activityName = (event.target.activityName.value);
+        const startDate = (event.target.startDate.value);
+        const startTime = (event.target.startTime.value);
+        const endDate = (event.target.endDate.value);
+        const endTime = (event.target.endTime.value);
+        const activityDescription = (event.target.activityDescription.value);
+        const activityLink = (event.target.activityLink.value);
+
+        const BACKEND_API = import.meta.env.VITE_BACKEND_API;
+
+        const response = await fetch(`${BACKEND_API}/club/add-activity`,{
+            method : "POST",
+            headers : {
+                "Content-Type":"application/json"
+            },
+            credentials:"include",
+            body:JSON.stringify({
+                activityName,
+                startDate,
+                startTime,
+                endDate,
+                endTime,
+                activityDescription,
+                activityLink
+            })
+        })
+        console.log(await response.json())
     }
   return (
    <>
@@ -20,7 +41,7 @@ const AddEvent = () => {
             <h1>EVENT DETAILS</h1>
         </div>
 
-        <form method="post" onSubmit={handleAddEvent}>
+        <form onSubmit={handleAddEvent}>
 
             <div className="section-title">
                 <span>01</span>
@@ -68,7 +89,7 @@ const AddEvent = () => {
 
             <div className="form-group">
                 <label htmlFor="Description">Enter Event Details</label>
-                <textarea id="Description" name="eventDescription" rows="5" placeholder="Write something about your event..." required></textarea>
+                <textarea id="Description" name="activityDescription" rows="5" placeholder="Write something about your event..." required></textarea>
             </div>
 
             <div className="section-title">
@@ -78,7 +99,7 @@ const AddEvent = () => {
 
             <div className="form-group">
                 <label htmlFor="eventLink">Provide Page Link For Event</label>
-                <input type="url" id="eventLink" name="eventLink" placeholder="https://example.com"/>
+                <input type="url" id="eventLink" name="activityLink" placeholder="https://example.com"/>
             </div>
 
             <button type="submit">

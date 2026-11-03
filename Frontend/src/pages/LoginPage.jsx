@@ -1,7 +1,19 @@
 
 import '../../public/LoginPage.css';
-function LoginPage({formHandler}){
-    
+function LoginPage(){
+    function formHandler(date){
+        const response = fetch("http://localhost:3000/login",{
+            method: "POST",
+            headers:{
+                "Content-Type":"application/json"
+            },
+            credentials:"include",
+            body:JSON.stringify({
+                councilEmail:date.email,
+                councilPassword:date.password
+            })
+        })
+    }
     return(
        <>
         <div className="box">
@@ -19,7 +31,6 @@ function LoginPage({formHandler}){
                         onSubmit={(event)=>{
                             event.preventDefault();
                             const data={
-                                
                                 email : event.target.elements.id.value,
                                 password : event.target.elements.pass.value
                             }
