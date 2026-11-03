@@ -1,21 +1,14 @@
 const mongoose = require('mongoose')
 
 const clubSchema = new mongoose.Schema({
-    clubEmail:{
-        type: String,
-        required: true
-    },
-    password:{
-        type: String,
-        required: true
-    },
     clubName:{
         type: String,
         required: true
     },
     clubType:{
         type: String,
-        required: ture
+        required: true,
+        ref: "Council"
     },
     clubEvents:[
         {
