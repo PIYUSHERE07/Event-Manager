@@ -3,6 +3,7 @@ import Home from './pages/Home';
 import LoginPage from './pages/LoginPage';
 import AddEvent from './pages/AddEvent';
 import AddCouncil from './pages/AddCouncil';
+import Calender from './pages/Calender';
 import MainNav from './components/MainNav';
 import SideBar from './components/SideBar';
 import Admin from './pages/Admin'
@@ -30,6 +31,10 @@ function App() {
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/allEvent' element={<AllEvent />} />
+            <Route path='/add-council' element={<AddCouncil />} />
+            <Route path='/add-event' element={<AddEvent />} />
+            <Route path='/event-calander' element={<Calender />} />
+            <Route path='/myActivities' element={<Home />} />
           </Routes>
         </main>
         

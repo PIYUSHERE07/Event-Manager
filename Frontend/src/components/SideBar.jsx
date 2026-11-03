@@ -8,10 +8,10 @@ const SideBar = () => {
       <ul className="sidebar-links">
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/allEvent'>All Activities</Link></li>
-        <li><Link to='/'>Calender</Link></li>
-        <li><Link to='/'>Add Event</Link></li>
+        <li><Link to='/event-calander'>Calender</Link></li>
+        <li><Link to='/add-event'>Add Event</Link></li>
         <li><Link to='/'>My Activities</Link></li>
-        <li><Link to='/'>Add Council</Link></li>
+        <li><Link to='/add-council'>Add Council</Link></li>
       </ul>
     </aside>
   );
