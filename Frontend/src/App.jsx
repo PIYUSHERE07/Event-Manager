@@ -34,9 +34,9 @@ function App() {
             <Route path='/add-event' element={<AddEvent />} />
             <Route path='/event-calander' element={<Calender />} />
             <Route path='/myActivities' element={<Home />} />
+            <Route path='/login-page' element={<LoginPage />} />
           </Routes>
         </main>
-        
       </div>
     </BrowserRouter>
     </>
