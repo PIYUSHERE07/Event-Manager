@@ -1,31 +1,26 @@
-import './App.css'
-// import User from './pages/User'
-import LoginPage from './pages/LoginPage';
-import User from './pages/User'
-import Club from './pages/Club'
-import Calendar from './pages/Calender';
-import Admin from './pages/Admin';
-
+import './App.css';
 import FirstPage from './pages/FirstPage';
+import AddEvent from './components/AddEvent'
+import {Route,useNavigate,Routes,BrowserRouter} from 'react-router-dom' 
+
 function App() {
   const type = "user";//host
   const isLoggedIn = false;
   function loginFormHandler(event){
     console.log(event)
   }
+  const BACKEND_URL = import.meta.env.BACKEND_URL;
 
   return (
     <>
-      <LoginPage/>
-      {/* <Calendar />
-    <Admin />
-    <LoginPage />
-      <Calendar />
-      {
-        type=="Club" ? <Club /> : (type=="host"?<Host /> : <User/>)
-      } */}
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<FirstPage />} />
+        <Route path="/add-event" element={<AddEvent />} />
+      </Routes>
+    </BrowserRouter>
     </>
   )
 }
 
-export default App
+export default App;
