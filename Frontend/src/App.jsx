@@ -1,7 +1,9 @@
 import './App.css';
 import Home from './pages/Home';
 import LoginPage from './pages/LoginPage';
-import AddEvent from './pages/AddEvent';
+import AddEvent from './components/AddEvent';
+import MainNav from './components/MainNav';
+import SideBar from './components/SideBar';
 import Admin from './pages/Admin'
 import AllEvent from './pages/AllEvent'
 import {Route,useNavigate,Routes,BrowserRouter} from 'react-router-dom' 
