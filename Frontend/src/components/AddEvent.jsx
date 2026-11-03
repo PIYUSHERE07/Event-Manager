@@ -1,5 +1,6 @@
 import React from 'react'
 import '../../public/AddEvent.css'
+import activityFormImage from '../assets/activityForm.jpg'
 const AddEvent = ({type}) => {
     async function handleAddEvent(event){
         event.preventDefault();
@@ -39,12 +40,16 @@ const AddEvent = ({type}) => {
         <div className="form-header">
             <div className="icon">📝</div>
             <h1>EVENT DETAILS</h1>
+            <img
+            src={activityFormImage}
+            alt="Activity Form"
+            className="header-image"
+            />
         </div>
 
         <form onSubmit={handleAddEvent}>
 
             <div className="section-title">
-                <span>01</span>
                 Basic Information
             </div>
 
@@ -54,7 +59,6 @@ const AddEvent = ({type}) => {
             </div>
 
             <div className="section-title">
-                <span>02</span>
                 Event Schedule
             </div>
 
@@ -83,7 +87,6 @@ const AddEvent = ({type}) => {
             </div>
 
             <div className="section-title">
-                <span>03</span>
                 Event Description
             </div>
 
@@ -93,7 +96,6 @@ const AddEvent = ({type}) => {
             </div>
 
             <div className="section-title">
-                <span>04</span>
                 Event Link
             </div>
 
